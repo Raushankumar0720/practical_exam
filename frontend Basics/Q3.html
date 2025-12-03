@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #main {
+      display: flex;
+      gap: 100px;
+    }
+
+    #first {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      padding: 5px 10px;
+      border: 2px solid blue;
+    }
+
+    #second {
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+      padding: 5px 10px;
+      border: 2px solid green;
+    }
+
+   
+    @media (max-width: 600px) {
+      #first , #second {
+        background-color: lightblue;
+      }
+    }
+
+    
+    @media (min-width: 601px) and (max-width: 900px) {
+        #first , #second {
+        background-color: lightgreen;
+      }
+    }
+
+    
+    @media (min-width: 901px) {
+        #first , #second {
+        background-color: lightyellow;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <div id="first" class="box"></div>
+    <div id="second" class="box"></div>
+  </div>
+</body>
+</html>

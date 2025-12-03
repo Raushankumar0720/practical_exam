@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" type="text" placeholder="Enter Your Name">
+
+    <button id="btn" type="submit">Submit</button>
+
+    <p id="text"></p>
+
+    <script>
+
+        const Input = document.querySelector("#name");
+        const btn = document.querySelector("#btn");
+
+        const textDisplay = document.querySelector("#text");
+
+        function saveLocal(){
+            const value = Input.value.trim();
+            localStorage.setItem("name",value);
+            textDisplay.innerText = value;
+            
+        }
+
+        btn.addEventListener("click",saveLocal);
+
+    </script>
+</body>
+</html>
